@@ -36,7 +36,5 @@ class Reports(Base):
     user_id = Column(Integer, ForeignKey(column='usuarios.id'),
                      name='usuarios_id', nullable=False)
 
-    # usuarios = relationship(User, back_populates='chamados')
-
     def __repr__(self):
         return f"Report(id={self.id!r}, subject={self.subject!r})"
